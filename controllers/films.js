@@ -37,7 +37,7 @@ filmRouter.put('/:id', function(req, res) {
 filmRouter.post('/', function(req, res) {
   var film = new Film({
     title: req.body.title,
-    actors: req.body.actors,
+    actors: [req.body.actors],
     genre: req.body.genre
   });
   query.add(film)
